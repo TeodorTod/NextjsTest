@@ -3,10 +3,9 @@ import { Main } from "../sections";
 
 
 const mainProps = {
-  image: { src: "/img/video.png", alt: "", width: 1000, height: 1680 },
-  title: "Agency procurement, outsourced.",
-  description: "Start the process here",
-  ctaText: "Start",
+  image: { src: "/img/video.png", alt: "", width: 500, height: 840 },
+  title: "Managed agency section",
+  description: "Stregthen your onboarding process",
 }
 
 export default function Home() {
