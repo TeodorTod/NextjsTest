@@ -1,19 +1,30 @@
+import Image from "next/image";
+
+import {
+  StyledTextContainer,
+  StyledContainer,
+  StyledTitle,
+  StyledSpace
+} from "./elements";
 
 export const CardComponent = ({ cardProps }) => {
-
   return (
-    <div>
-      {
-        cardProps.map(card => (
-          <>
-            <h1>{card.title}</h1>
-            <h2>{card.subtitle}</h2>
+    <StyledContainer>
+      <StyledTextContainer>
+        {cardProps.map(card =>
+        <>
+          <StyledTitle>
             <img src={card.img} alt="" />
-          </>
-        )
-        )
-      }
-
-    </div>
-  )
-}
+            <div>
+              <h1>{card.title}</h1>
+              <h4>{card.subtitle}</h4>
+            </div>
+          </StyledTitle>
+          <StyledSpace>
+            <p></p>
+          </StyledSpace>
+          </>)}
+      </StyledTextContainer>
+    </StyledContainer>
+  );
+};

@@ -4,12 +4,11 @@ import { SectionContainer, SectionBigHeading, SectionSubheading } from "~/compon
 export const StyledContainer = styled(({ height, ...props }) => <SectionContainer {...props} />)`
   align-items: center;
   display: block;
-  
-
 `;
 
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
   margin: 0;
+  padding: 0;
   color: black;
 `;
 
@@ -29,7 +28,6 @@ export const StyledGrid = styled(({ ...props }) => <div {...props} />)`
   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
   grid-template-rows: auto auto;
   flex-wrap: nowrap | wrap | wrap-reverse;
-
 // `;
 
 export const StyledImageContainer = styled(({ ...props }) => <div {...props} />)`

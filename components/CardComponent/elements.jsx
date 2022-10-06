@@ -1,67 +1,49 @@
-import styled, { css } from "styled-components";
-import { SectionInnerHeading } from "~/components";
+import styled from "styled-components";
+import { SectionContainer, SectionBigHeading } from "~/components";
 
-const outlinedVariantButton = css`
-  background-color: transparent;
-  border: 1px solid;
-  border-color: ${({ theme, color }) => theme[color]};
-  color: ${({ theme, color }) => theme[color]};
-
-  &:hover {
-    border-color: ${({ theme }) => theme.main};
-    background-color: ${({ theme }) => theme.main};
-    color: ${({ theme }) => theme.white};
-  }
+export const StyledContainer = styled(({ height, ...props }) => <SectionContainer {...props} />)`
+  background-color: #EEF1FF;
+  text-align: left;
+  margin-left: -120px;
 `;
 
-const containedVariantButton = css`
-  background-color: ${({ theme, color }) => theme[color]};
-
-  &:hover {
-    background-color: ${({ theme, color }) => theme.hover[color]};
-  }
-`;
-
-const textVariantButton = css`
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  min-width: unset;
-  padding: 0 2rem;
-  margin: 0 2rem;
-  color: ${({ theme, color }) => theme[color]};
-
-  &:hover {
-    color: ${({ theme }) => theme.black};
-    border-bottom: 1px solid ${({ theme }) => theme.black};
-  }
-`;
-
-const buttonVariants = {
-  outlined: outlinedVariantButton,
-  contained: containedVariantButton,
-  text: textVariantButton,
-};
-
-export const StyledButton = styled(({ color = "primary", variant = "contained", ...props }) => <button {...props} />)`
-  font-family: sans-serif;
-  overflow: hidden;
-  text-align: center;
-  align-self: center;
-  display: flex;
+export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
   align-items: center;
-  justify-content: center;
-  border-radius: 7px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  min-width: 184px;
-  min-height: 56px;
-  padding: 16px 0;
-  cursor: pointer;
-  border: none;
-  color: white;
-  ${({ variant }) => buttonVariants[variant]}
+h1 {
+  font-size: 24px
+}
+h4 {
+  font-size: 14px;
+  line-height: 1.4rem;
+  left: 100%;
+  font-weight: 400;
+}
+}
+img {
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+}
+ p {
+  margin-bottom: 5px;
+  background-color: white;
+ }
+
 `;
 
-export const StyledButtonText = styled((props) => <SectionInnerHeading {...props} />)``;
+export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
+
+`;
+
+export const StyledSpace = styled(({ ...props }) => <div {...props} />)`
+width: 100%;
+background-color: white;
+padding-bottom: 20px;
+`;
+
+
+
