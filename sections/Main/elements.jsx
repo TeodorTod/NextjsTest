@@ -1,15 +1,11 @@
 import styled from "styled-components";
-import { Button, SectionContainer, SectionBigHeading, SectionSubheading } from "~/components";
+import { SectionContainer, SectionBigHeading, SectionSubheading } from "~/components";
 
 export const StyledContainer = styled(({ height, ...props }) => <SectionContainer {...props} />)`
   align-items: center;
   display: block;
-`;
+  
 
-export const StyledGetStartedBtn = styled((props) => <Button {...props} variant="contained" color="main" />)`
-  margin-top: 4.375rem;
-  padding-top: 0;
-  padding-bottom: 0;
 `;
 
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
@@ -27,11 +23,30 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   font-family: sans-serif;
   text-align: center;
 `;
+export const StyledGrid = styled(({ ...props }) => <div {...props} />)`
+  background-image: url("/img/background.png");
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  grid-template-rows: auto auto;
+  flex-wrap: nowrap | wrap | wrap-reverse;
+
+// `;
 
 export const StyledImageContainer = styled(({ ...props }) => <div {...props} />)`
-  max-width: 22.03rem;
-  max-height: 45rem;
-  width: 100%;
-  height: 100%;
-  margin-right: auto;
+  display: inline-block;
+  width: 55%;
+  margin: 30px 200px 0 120px;
+  
 `;
+
+export const StyledCardContainer = styled(({ ...props }) => <div {...props} />)`
+  color: black;
+  width: 75%;
+  margin: 60px 190px 0 200px;
+// `;
+
+
+
+
+
+

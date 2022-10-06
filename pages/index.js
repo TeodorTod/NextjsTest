@@ -1,11 +1,13 @@
+import Card from "../components/Card";
 import { Main } from "../sections";
 
 
 
 const mainProps = {
-  image: { src: "/img/video.png", alt: "", width: 500, height: 840 },
+  image: { src: "/img/video.png", alt: "vide0-png", width: 500, height: 840 },
   title: "Managed agency section",
   description: "Stregthen your onboarding process",
+  card: "aaaaaaaaaa",
 }
 
 export default function Home() {
@@ -20,7 +22,9 @@ export default function Home() {
         />
       </head>
       <div>
-        <Main {...mainProps} />
+        <Main {...mainProps} >
+          
+        </Main>
       </div>
     </>
   );

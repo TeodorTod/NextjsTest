@@ -6,20 +6,24 @@ import {
   StyledTitle,
   StyledDescription,
   StyledImageContainer,
+  StyledCardContainer,
+  StyledGrid
 } from "./elements";
 
-export const Main = ({ image, title, description, ctaText, ...props }) => {
+export const Main = ({ image, title, description, card, ...props }) => {
   return (
     <StyledContainer {...props}>
-       <StyledTextContainer>
+      <StyledTextContainer>
         <StyledTitle>{title}</StyledTitle>
         <StyledDescription>{description}</StyledDescription>
       </StyledTextContainer>
-      <StyledImageContainer>
-        <Image layout="responsive" src={image.src} alt={image.alt} width={image.width} height={image.height} />
-      </StyledImageContainer>
-     
-      
+      <StyledGrid>
+        <StyledImageContainer>
+          <Image layout="responsive" src={image.src} alt={image.alt} width={image.width} height={image.height} />
+        </StyledImageContainer>
+        <StyledCardContainer>{card}</StyledCardContainer>
+        </StyledGrid>
+        
     </StyledContainer>
   );
 };
